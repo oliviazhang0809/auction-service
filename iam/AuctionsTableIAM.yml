@@ -1,0 +1,7 @@
+AuctionsTableIAM:
+  Effect: Allow
+  Action:
+    - dynamodb:PutItem
+  Resource:
+    - ${self:custom.AuctionsTable.arn}
+    # - arn:aws:dynamodb:#{AWS::Region}:#{AWS::AccountId}:table/AuctionsTable-${self:provider.stage} # from https://eu-west-1.console.aws.amazon.com/dynamodbv2/home?region=eu-west-1#table?initialTagKey=&name=AuctionsTable&tab=overview
