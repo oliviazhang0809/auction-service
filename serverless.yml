@@ -8,7 +8,7 @@ provider:
   name: aws
   runtime: nodejs12.x
   memorySize: 256
-  stage: ${opt:stage, 'dev'}
+  stage: ${opt:stage, 'dev'} # where the table name suffix comes from
   region: eu-west-1
   environment:
     AUCTIONS_TABLE_NAME: ${self:custom.AuctionsTable.name}
